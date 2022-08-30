@@ -1,4 +1,3 @@
-
 package com.portfolio.ra.Security.Entity;
 
 import com.portfolio.ra.Security.Enums.RolNombre;
@@ -14,17 +13,20 @@ import javax.validation.constraints.NotNull;
 public class Rol {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private int id;
+    private int id;
     @NotNull
     @Enumerated(EnumType.STRING)
-private RolNombre rolNombre;  
+    private RolNombre rolNombre;
 
+    //Constructor
     public Rol() {
     }
 
     public Rol(RolNombre rolNombre) {
         this.rolNombre = rolNombre;
     }
+
+    //Getter y Setter
 
     public int getId() {
         return id;
@@ -41,7 +43,6 @@ private RolNombre rolNombre;
     public void setRolNombre(RolNombre rolNombre) {
         this.rolNombre = rolNombre;
     }
-    
-    
-    
+
+
 }
